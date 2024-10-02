@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font-style.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- back-to-top btn -->
+    <button id="myBtn" title="Go to top">Top</button>
+    <!-- end of back-to-top btn -->
+
+    <header class="body-header">
+      <div class="navbar">
+        <a href="/index.html" class="logo">
+          <img class="logo-img" src="/assets/logo.png" alt="" />
+        </a>
+        <div class="nav-search">
+          <div class="nav-search-wrapper">
+            <form action="" class="nav-search-form" method="get">
+              <button class="nav-search-form-btn" type="submit"><img src="/assets/glass.png" alt="" class="nav-search-form-btn-img" / ></button>
+              <input class="nav-search-form-input" type="search" name="search" id="search-form" placeholder="search..." />
+            </form>
+          </div>
+        </div>
+        <div class="subscribe">
+          <a href="#subscribe" class="subscribe-btn">subscribe</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <article class="card">
+          <header class="article-header"><img src="/assets/docker-golang.png" alt="" class="article-header-img" /></header>
+          <div class="article-title">
+            <p class="article-title-date">Jul 10</p>
+            <a href=""><h2>Multi-Stage Docker Build of Golang App</h2></a>
+            <div class="article-title-tags">
+              <a class="article-title-tags-item" href="">docker</a>
+              <a class="article-title-tags-item" href="">golang</a>
+              <a class="article-title-tags-item" href="">linux</a>
+            </div>
+          </div>
+          <footer class="article-footer">
+            <p class="article-footer-time">5 min read</p>
+            <a href=""><img src="/assets/share.png" alt="" /></a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="article-header"><img src="/assets/rate-limiter.jpg" alt="" class="article-header-img" /></header>
+          <div class="article-title">
+            <p class="article-title-date">Jul 23</p>
+            <a href=""><h2>Build Your Own Rate limiter with Golang</h2></a>
+            <div class="article-title-tags">
+              <a class="article-title-tags-item" href="">golang</a>
+              <a class="article-title-tags-item" href="">REST API</a>
+            </div>
+          </div>
+          <footer class="article-footer">
+            <p class="article-footer-time">6 min read</p>
+            <a href=""><img src="/assets/share.png" alt="" /></a>
+          </footer>
+        </article>
+
+        <article class="card">
+          <header class="article-header"><img src="/assets/discord-bot.png" alt="" class="article-header-img" /></header>
+          <div class="article-title">
+            <p class="article-title-date">Aug 17</p>
+            <a href=""><h2>Create Websocket-based Discord Bot</h2></a>
+            <div class="article-title-tags">
+              <a class="article-title-tags-item" href="">golang</a>
+              <a class="article-title-tags-item" href="">discord</a>
+              <a class="article-title-tags-item" href="">websocket</a>
+            </div>
+          </div>
+          <footer class="article-footer">
+            <p class="article-footer-time">5 min read</p>
+            <a href=""><img src="/assets/share.png" alt="" /></a>
+          </footer>
+        </article>
+        <a href="" class="more-article">show more...</a>
+      </div>
+
+      <aside>
+        <div class="profile">
+          <div class="profile-img">
+            <img src="/assets/me.jpg" alt="" />
+          </div>
+          <div class="profile-intro">
+            Hi👋 I'm farraselfahd. I have interest in webdev, devops, and cloud computing. This blog is dedicated to my learning journey so far. Hopefully it
+            could also help yours. feel free to subscribe if you find it interesting 😁.
+          </div>
+        </div>
+        <div class="social">
+          <div class="social-title"><h1>Social</h1></div>
+          <div class="social-list">
+            <a href="" class="social-list-item">
+              <div class="social-list-item-name">
+                <img src="/assets/twitter.png" alt="" />
+                Twitter/X
+              </div>
+              <div class="social-list-item-count">20.1K</div>
+            </a>
+            <a href="" class="social-list-item">
+              <div class="social-list-item-name">
+                <img src="/assets/linkedin.png" alt="" />
+                Linkedin
+              </div>
+              <div class="social-list-item-count">1.1K</div>
+            </a>
+            <!-- <a href="" class="social-list-item">
+              <div class="social-list-item-name">
+                <img src="/assets/instagram.png" alt="" />
+                Instagram
+              </div>
+              <div class="social-list-item-count">34.2K</div>
+            </a> -->
+            <a href="" class="social-list-item">
+              <div class="social-list-item-name">
+                <img src="/assets/github.png" alt="" />
+                Github
+              </div>
+              <div class="social-list-item-count">140K</div>
+            </a>
+          </div>
+        </div>
+        <div class="tags">
+          <div class="tags-title"><h1>Tags</h1></div>
+          <div class="tags-list">
+            <a class="tags-list-item" href="">linux</a>
+            <a class="tags-list-item" href="">golang</a>
+            <a class="tags-list-item" href="">docker</a>
+            <a class="tags-list-item" href="">REST API</a>
+            <a class="tags-list-item" href="">discord</a>
+            <a class="tags-list-item" href="">websocket</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="body-footer">
+      <div class="newsletter" id="subscribe">
+        <div class="newsletter-form">
+          <h1>Newsletter</h1>
+          <p>Stay ahead of the curve with our exclusive daily newsletter directly in your inbox!</p>
+          <form action="" class="newsletter-form-wrapper" method="post">
+            <input type="email" name="newsletter" id="newsletter" placeholder="enter email here..." class="newsletter-form-input" />
+            <button class="newsletter-form-btn" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="newsletter-img"></div>
+      </div>
+
+      <div class="footbar">Developed by farraselfahd</div>
+    </footer>
+  </body>
+
+  <script type="module" src="index.js"></script>
+</html>

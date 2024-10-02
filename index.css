@@ -1,0 +1,457 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(223, 229, 235);
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #215968; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*********** header area ***********/
+
+header.body-header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  border-radius: 0.7rem;
+  padding: 0.3rem 1rem;
+  background-color: white;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.logo-img {
+  width: 3rem;
+}
+
+/* img {
+  max-width: 100%;
+} */
+
+.nav-search {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-basis: 50%;
+}
+
+.nav-search-wrapper {
+  border: 1px solid black;
+  border-radius: 0.7rem;
+  flex-basis: 100%;
+}
+
+.nav-search-form {
+  display: flex;
+}
+
+.nav-search-form-btn-img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.nav-search-form-input,
+.nav-search-form-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+}
+
+.nav-search-form-input {
+  flex-grow: 1;
+}
+
+.subscribe {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.subscribe-btn {
+  height: 2.6rem;
+  border-radius: 0.7rem;
+  /* border: 1px solid grey; */
+  background-color: #45c4c7;
+  padding: 0.7rem;
+  /* margin: auto; */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.subscribe-btn:hover {
+  background-color: #ffffff;
+  color: #45c4c7;
+  border: 1px solid #45c4c7;
+}
+
+@media screen and (max-width: 600px) {
+  .subscribe {
+    display: none;
+  }
+}
+
+/*********** main area ***********/
+
+main {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-wrap: wrap;
+  }
+}
+
+/*********** content area ***********/
+
+.content {
+  flex-basis: 60%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+article.card {
+  border-radius: 1rem;
+  /* border: 1px solid orange; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+header.article-header {
+  border-radius: 1rem;
+}
+
+img.article-header-img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.article-title {
+  padding: 1rem;
+}
+
+.article-title a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+.article-title-date {
+  font-weight: 100;
+}
+
+.article-title-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+
+.article-title-tags-item {
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.article-title-tags-item:hover {
+  background-color: black;
+  color: white;
+}
+
+footer.article-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-footer img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.more-article {
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  background-color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  color: grey;
+  align-self: center;
+}
+
+.more-article:hover {
+  background-color: grey;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    flex-basis: 100%;
+  }
+}
+
+/*********** aside area ***********/
+
+aside {
+  position: sticky;
+  top: 0;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+  padding: 1rem 0;
+  border-radius: 1rem;
+}
+
+.profile {
+  /* display: flex;
+  gap: 1rem; */
+  /* border: 1px solid purple; */
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.profile-intro {
+  text-align: justify;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.profile-img {
+  border-radius: 50%;
+  padding: 0.5rem;
+  float: right;
+}
+
+.profile-img img {
+  border-radius: 50%;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* border: 1px solid purple; */
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.social-title {
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.social-list-item-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-list-item-name img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.social-list-item-count {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* border: 1px solid blueviolet; */
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.tags-title {
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+.tags-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.tags-list-item {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.tags-list-item:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  aside {
+    flex-basis: 100%;
+  }
+}
+/*********** footer area ***********/
+
+footer.body-footer {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footbar,
+.newsletter {
+  /* border: 1px solid green; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  /* gap: 1rem; */
+  border-radius: 0.7rem;
+  /* padding: 1rem; */
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.newsletter-form {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.7rem 0 0 0.7rem;
+
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 57%, #93dbff 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #ffffff), color-stop(57%, #ffffff), color-stop(100%, #93dbff));
+  background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 57%, #93dbff 100%);
+  background: -o-linear-gradient(left, #ffffff 0%, #ffffff 57%, #93dbff 100%);
+  background: -ms-linear-gradient(left, #ffffff 0%, #ffffff 57%, #93dbff 100%);
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 57%, #93dbff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#93dbff', GradientType=1 );
+}
+
+.newsletter-form h1 {
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+.newsletter-form-wrapper {
+  display: flex;
+  border: 1px solid #215968;
+  border-radius: 1rem;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.newsletter-form-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 2rem;
+  /* padding: 0.5rem; */
+}
+
+.newsletter-form-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #45c4c7;
+  outline: none;
+  background-color: #45c4c7;
+  color: #ffffff;
+  border-radius: 0.7rem;
+}
+
+.newsletter-form-btn:hover {
+  background-color: transparent;
+  color: #45c4c7;
+}
+
+.newsletter-img {
+  flex-basis: 60%;
+  background-image: url('/assets/subscribe.png');
+  background-size: contain;
+  border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.footbar {
+  padding: 1rem;
+  background-color: #ffffff;
+  /* position: sticky;
+  bottom: 0; */
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter-form {
+    flex-basis: 100%;
+    border-radius: 0.7rem;
+  }
+  /* .newsletter-form-input {
+    width: 100%;
+  } */
+  .newsletter-img {
+    display: none;
+  }
+}
