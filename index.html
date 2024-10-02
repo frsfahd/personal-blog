@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+    <title>Bookshelf App</title>
+
+    <!-- Impor script kamu di sini -->
+    <!-- Lampirkan `defer` jika pemanggilan dilakukan dalam <head> -->
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header class="navbar is-light level">
+      <h1 class="navbar-item level-item is-family-sans-serif has-text-weight-semibold">Bookshelf App</h1>
+    </header>
+
+    <main class=" is-family-sans-serif ">
+      <section class="section container is-max-tablet">
+        <h2 class="title has-text-centered">Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <div class="field">
+            <label class="label" for="bookFormTitle">Judul</label>
+            <input class="input" id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+          </div>
+          <div class="field">
+            <label class="label" for="bookFormAuthor">Penulis</label>
+            <input class="input" id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+          </div>
+          <div class="field">
+            <label class="label" for="bookFormYear">Tahun</label>
+            <input class="input" id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+          </div>
+          <div class="field">
+            <label class="label" for="bookFormIsComplete">Selesai dibaca</label>
+            <input class="checkbox" id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" autocomplete="off" />
+          </div>
+          <button class="button" id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+            Masukkan Buku ke rak
+            <span>Belum selesai dibaca</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="section container is-max-tablet has-background-text-90">
+        <h2 class="title has-text-centered">Cari Buku</h2>
+        <form class="field has-addons" id="searchBook" data-testid="searchBookForm">
+          <!-- <div class="control"><label class="label" for="searchBookTitle">Judul</label></div> -->
+          <div class="control is-expanded">
+            <input class="input" id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" placeholder="judul buku..." />
+          </div>
+          <div class="control"><button class="button" id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">Cari</button></div>
+        </form>
+      </section>
+
+      <section class="section container is-max-tablet has-background-text-95">
+        <h2 class="title">Belum selesai dibaca</h2>
+
+        <div id="incompleteBookList" data-testid="incompleteBookList">
+          <!-- 
+            Ini adalah struktur HTML untuk masing-masing buku.
+            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+          -->
+        
+          </div>
+        </div>
+      </section>
+
+      <section class="section container is-max-tablet has-background-text-95">
+        <h2 class="title">Selesai dibaca</h2>
+
+        <div class="container is-max-tablet" id="completeBookList" data-testid="completeBookList">
+          <!-- 
+            Ini adalah struktur HTML untuk masing-masing buku.
+            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+          -->
+          
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
